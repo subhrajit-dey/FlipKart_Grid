@@ -7,7 +7,7 @@ The project aims to create a full fledged website that extracts data from variou
 REQUIREMENTS:
 STEP1 - Clone the repository in your device using git clone or you can simply download the code file from this github repository.
 
-STEP2 - Install Chrome Driver in your device and record the path of the chromedriver.exe file.
+STEP2 - Install Chrome Driver from https://chromedriver.chromium.org/downloads in your device and record the path of the chromedriver.exe file.
 
 STEP3 - Open the code files in your own *Virtual Environment* or you can also use pyCharm as the IDE for an inbuilt virtual enviroment to run your code files.
 
