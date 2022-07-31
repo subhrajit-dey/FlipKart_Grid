@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="URL Shortening API Landing Page built by Karishma Garg for a Frontend Mentor Challenge">
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="../static/file_user.css">
+  
+  <script src="https://kit.fontawesome.com/5731f6d037.js" crossorigin="anonymous"></script>
+  <script src="../static/file_user.js"></script>
+  <title>Flipkart Trends</title>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="grid-container">
+
+    <!-- Logo -->
+    <a href="#" class="col-2"><img src="../static/images/fl.jpg" alt="flipkart grid logo" width="140px" height="40px"></a>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu col-3">
+
+
+
+
+      <li class="nav-item">
+        <a href="#">Extracting Trends</a>
+      </li>
+
+
+
+      <!-- Buttons for mobile nav -->
+      <li class="nav-item">
+        <div id="nav-menu-btns">
+        <!--    <a href="#">Login</a>-->
+          <a href="#" class="main-btns">Trends</a>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-btns">
+      <!--  <a href="#">Login</a> -->
+      <a href="#" class="main-btns">Trends</a>
+    </div>
+
+    <!-- Hamburger -->
+    <span class="hamburger"></span>
+  </nav>
+
+  <!-- Header -->
+  <header class="grid-container">
+
+     <!-- Header Image -->
+     <div class="header-image col-6"></div>
+
+    <!-- Header text -->
+    <div class="header-text col-6">
+      <h2>
+        Extracted Trends From Social Media
+      </h2>
+      <p class="header-desc">
+        Real time trends in Social Media Like facebook , Instagram and Twitter.
+      </p>
+      <a href="#stat-h" class="main-btns">Extract Trends</a>
+    </div>
+
+  </header>
+
+  <!-- Main -->
+  <main>
+    
+     <div class="stats-bg">
+
+      <!-- Shorten Link input -->
+      <div class="grid-container form-result">
+
+        <!-- Form Container -->
+        <div class="form-container col-12">
+        <center>
+          <h1 class="search">SEARCH YOUR OWN TREND...</h1>
+        </center>
+          <form class="col-12" name="url_form" id="form" action="/user" method="post">
+            <input type="text" name="url" id="url-input" placeholder="for searching please add # first..." class="" required>
+            <button class="main-btns" id="submit-url" type="submit">Get Trend...</button>
+          </form>
+        </div>
+
+      </div>
+
+  
+      <!-- Stats-Container -->
+      <div class="stats-container grid-container" id="stat-h">
+
+        <!-- Stats Heading -->
+        <div class="stats-head col-12">
+          <h2 class="stat-head">
+            Social Media Platform
+          </h2>
+          <p class="stat-head-desc">
+            Track your product trends on each social media platforms like Facebook,Instagram and Twitter.
+          </p>
+        </div>
+  
+        <!-- Statistics Columns Container -->
+        <div class="stat-col-container col-12">
+  
+          <!-- Statistic Column: Brand Recognition -->
+          <div class="stat-col">
+            <div class="stat-col-img">
+              <img src="../static/images/fb_32x32.png" alt="" width="40px" height="40px">
+            </div>
+            <center>
+            <h3 class="stat-col-head">
+              Facebook
+            </h3>
+          </center>
+            <p class="stat-col-desc">
+              <center class="stat-col-desc">
+              Fetch recent fashion trends' from Facebook. <br>
+              CLick the button below <br><br><br>
+            </center>
+            </p>
+            <center>
+            <p class="stat-col-desc">
+              {{facebExtracted}}
+            </p>
+          </center>
+          <center>
+              <img src="../static/images/loading_button.gif" alt="" class="load_button_facebook load_button">
+            </center>
+            <div class="button_mar button_mar1 button_mar_facebook" OnClick="showLoader();">
+                <a href="/facebook" class="button-85" id="button-85_facebook">Trends</a>
+            </div>
+          </div>
+
+          <hr>
+
+          <!-- Statistic Column: Detailed Records -->
+          <div class="stat-col" id="detailed-records">
+            <div class="stat-col-img">
+              <img src="../static/images/xxhdpi_launcher.png" alt="" width="40px" height="40px">
+            </div>
+            <center>
+            <h3 class="stat-col-head">
+              Instagram
+            </h3>
+          </center>
+            <p class="stat-col-desc">
+              <center class="stat-col-desc">
+              Fetch recent fashion trends' from Instagram. <br>
+              CLick the button below <br><br><br>
+              {{instaExtracted}}
+            </center>
+            </p>
+            <center>
+              
+              <center>
+                <img src="../static/images/loading_button.gif" alt="" class="load_button_instagram load_button">
+              </center>
+              <div class="button_mar">
+            </p>
+          </center>
+            <div class="button_mar button_mar1 button_mar_instagram" OnClick="showLoader1();">
+                <a href="/instagram" class="button-85">Trends</a>
+            </div>
+          </div>
+
+          <hr>
+
+          <!-- Statistic Column: Fully Customizable -->
+          <div class="stat-col" id="customizable">
+            <div class="stat-col-img">
+              <img src="../static/images/download.png" alt="" width="40px" height="40px">
+            </div>
+            <center>
+            <h3 class="stat-col-head">
+              Twitter
+            </h3>
+            </center>
+            <p class="stat-col-desc">
+              <center class="stat-col-desc">
+              Fetch recent fashion trends' from Twitter. <br>
+              CLick the button below <br><br><br>
+              {{tweetExtracted}}
+            </center>
+            </p>
+            <center>
+              <center>
+                <img src="../static/images/loading_button.gif" alt="" class="load_button_twitter load_button">
+              </center>
+              <div class="button_mar">
+            </p>
+          </center>
+            <div class="button_mar  button_mar1 button_mar_twitter" OnClick="showLoader2();">
+                <a href="/twitter" class="button-85">Trends</a>
+            </div>
+          </div>
+          
+        </div>
+  
+      </div>
+
+    </div>
+
+  </main>
+  
+  <!-- Boost Container Background -->
+  <div class="boost-bg">
+
+    <section class="grid-container">
+      <h2 class="col-12">FETCH THE TRENDS</h2>
+      <a href="/fetch" class="main-btns col-12">Fetch</a>
+    </section>
+
+  </div>
+
+      <!-- Graph purpose -->
+      <div>
+
+        <div class="chartCard">
+          <div class="chartBox">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+
+
+
+        <script type="text/javascript">
+          function showLoader() {
+              document.getElementsByClassName("load_button_facebook")[0].style.display = 'block';
+          }
+        </script>
+
+        <script type="text/javascript">
+          function showLoader1() {
+              document.getElementsByClassName("load_button_instagram")[0].style.display = 'block';
+          }
+        </script>
+        
+        <script type="text/javascript">
+          function showLoader2() {
+              document.getElementsByClassName("load_button_twitter")[0].style.display = 'block';
+          }
+        </script>
+
+
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const days= ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+        const profit=[18, 12, 6, 9, 12, 3, 9];
+        const sales=[18, 12, 24, 9, 12, 3, 18];
+        const cost=[9, 12, 6, 9, 12, 3, 4.5];
+        const financialsnumber = days.map((day,index) =>{
+            let dayObject={};
+            dayObject.day=day;
+            dayObject.financials={};
+            console.log(day);
+            console.log(index);
+        } )
+       // datastructure: [
+        //{days:'Mon',financials:{cost: 9,sales:27,profit:18}}
+        
+        //]
+
+    // setup 
+    const data = {
+      labels:days,
+      datasets: [{
+        label: 'Weekly Sales',
+        data: profit,
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+        borderColor: 'rgba(0, 0, 0, 1)',
+        borderWidth: 1,
+        tension:0.4
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
+      </div>
+      <!-- <div id="title">Which tennis player was No.1 the longest?</div>
+       <div id="legend">
+      <div class="item female">Women</div>
+      <div class="item male">Men</div>
+        </div>
+        <div id="chart-wrapper">
+      <canvas id="chart"></canvas>
+        </div>
+        <div id="footer">
+          <div class="left" ><a href="https://createwithdata.com/chartjs-and-csv/" target="_blank">About</a></div>
+          <div class="right">Source: <a href="https://public.tableau.com/en-us/s/resources" target="_blank">Tableau</a> / Wikipedia</div>
+        </div> -->
+     <!--  <div class="boost-bg">
+
+        <section class="grid-container">
+          <h2 class="col-12">Graph</h2>
+          <a href="#" class="main-btns col-12">Get Started</a>
+        </section>
+    
+      </div>
+    -->
+      <!-- Result Container -->
+      <div class="result grid-container"></div>
+
+
+    
+  <!-- Footer -->
+  <footer class="footer-bg">
+    </div>
+  </footer>
+  
+
+ 
+
+  <!-- Script -->
+  
+</body>
+</html>

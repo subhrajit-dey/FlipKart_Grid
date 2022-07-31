@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Trend</title>
+    <link rel="stylesheet" href="../static/display_user.css">
+</head>
+<body>
+    <div class="nav_mer">
+        <div class="navb">
+            <h1 class="nav_head">YOUR TRENDY SEARCH...</h1>
+        </div>
+    </div>
+    <br><br>
+    <a href="/">
+    <div class="nuv_btn">
+        <button class="button-74" role="button">Home</button>
+    </div>
+    </a>
+    <div class="text-box">
+        <center>
+            <h1 class="heading_name">ITEM NAME</h1>
+        </center>
+        <center>
+            <h2 class="heading_name">{{user_text}}</h2>
+        </center>
+    </div>
+    <div class="text-box">
+        <center>
+            <h3 class="heading_name">{{trends[1]}} &nbsp; PEOPLE ARE TALKING ABOUT YOUR TREND ON FACEBOOK</h3>
+            <h3 class="heading_name">{{trends[2]}} &nbsp; PEOPLE ARE TALKING ABOUT YOUR TREND ON INSTAGRAM</h3>
+            <h3 class="heading_name">{{trends[0]}} &nbsp; RECENT TWITTER POSTS ON THIS TREND</h3>
+        </center>
+    </div>
+    <div class="container_image">
+        
+        <img src={{image_ans[0]}} alt="" class="user_image">
+        <img src={{image_ans[3]}} alt="" class="user_image">
+        <img src={{image_ans[6]}} alt="" class="user_image">
+
+    </div>
+    </div>
+    <center>
+        <div class="text-box-buy">
+            <center>
+                <h2 class="heading_name">GRAB YOU TREND FROM FLIPKART</h2>
+            </center>
+        </div>
+        <!-- HTML !-->
+        <br><br>
+        <a href={{user_link}} target="_blank">
+<button class="button-49" role="button">BUY NOW</button>
+        </a>
+    </center>
+
+
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <center>
+              <p class="copyright-text">Copyright &copy; High_Definition
+            </center>
+              </p>
+            </div>
+          </div>
+        </div>
+  </footer>
+</body>
+</html>
