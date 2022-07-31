@@ -11,7 +11,7 @@ STEP2 - Install Chrome Driver from https://chromedriver.chromium.org/downloads i
 
 STEP3 - Open the code files in your own *Virtual Environment* or you can also use pyCharm as the IDE for an inbuilt virtual enviroment to run your code files.
 
-STEP4 - Copy and Paste the path of the chrome driver in the path *variable** in main.py file
+STEP4 - Copy and Paste the path of the chrome driver in the path **variable** in main.py file (line 97)
 
 STEP5 - Install the following libraries in your Virtual Environment using the code below
 
